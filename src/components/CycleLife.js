@@ -24,7 +24,7 @@ export default class CycleLife extends Component {
     render() { 
         return (
             <div>
-                <h1>As horas são {this.state.hour}</h1>
+                <h1>The timer is {this.state.hour}</h1>
             </div>
         );
     }

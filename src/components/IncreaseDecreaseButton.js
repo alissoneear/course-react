@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class AddRemoveButton extends Component {
+export default class IncreaseDecreaseButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
