@@ -1,7 +1,7 @@
 import React from "react";
-import ExpenseView from "./components/ExpenseView";
+import {ExpenseView} from "./components/Expenses/ExpenseView";
 
-export default function ClassCourseBR() {
+export const App=() => {
     const expenses = [
         {
             id: 'e1',
@@ -31,8 +31,8 @@ export default function ClassCourseBR() {
     return (
         <div>
             <h2>Let's get started!</h2>
-            <div className="expenses">
-            <ExpenseView items={expenses}/>
+            <div >
+                <ExpenseView items={expenses} />
             </div>
         </div >
     );
