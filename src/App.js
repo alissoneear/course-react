@@ -1,7 +1,8 @@
 import React from "react";
-import {ExpenseView} from "./components/Expenses/ExpenseView";
+import { ExpenseView } from "./components/Expenses/ExpenseView";
+import { NewExpense } from "./components/NewExpense/NewExpense";
 
-export const App=() => {
+export const App = () => {
     const expenses = [
         {
             id: 'e1',
@@ -30,10 +31,8 @@ export const App=() => {
     ]
     return (
         <div>
-            <h2>Let's get started!</h2>
-            <div >
-                <ExpenseView items={expenses} />
-            </div>
+            <NewExpense />
+            <ExpenseView items={expenses} />
         </div >
     );
 }
