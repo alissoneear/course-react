@@ -3,6 +3,8 @@ import "./ExpenseView.css";
 import { Card } from "../UI/Card";
 import { ExpensesFilter } from "./ExpensesFilter";
 import { ExpensesList } from './ExpensesList';
+import { ExpensesChart } from './ExpensesChart';
+import { ExpensesChartYears } from './ExpensesChartYears';
 
 export const ExpenseView = (props) => {
     const [filteredYear, setFilteredYear] = useState("all");
@@ -16,9 +18,19 @@ export const ExpenseView = (props) => {
 
     const selectedAllYearsOrNot = () => {
         if (filteredYear === "all") {
-            return <ExpensesList items={props.items} />
+            return (
+                <div>
+                    <ExpensesChartYears expenses={props.items} />
+                    <ExpensesList items={props.items} />
+                </div>
+            )
         } else {
-            return <ExpensesList items={filteredExpenses} />
+            return (
+                <div>
+                    <ExpensesChart expenses={filteredExpenses} />
+                    <ExpensesList items={filteredExpenses} />
+                </div>
+            )
         }
     }
     return (
